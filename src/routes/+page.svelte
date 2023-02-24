@@ -1,6 +1,9 @@
 <script lang="ts">
 	import './root.scss';
 </script>
+<svelte:head>
+	<title>Jgrtowy's site</title>
+</svelte:head>
 
 <body>
 	<main>
