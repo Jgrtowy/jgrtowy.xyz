@@ -8,6 +8,7 @@ body{
      color: #fff;
      overflow: hidden;
 }
+
 main{
      display: flex;
      width: 100%;
@@ -15,7 +16,22 @@ main{
      align-items: center;
      justify-content: center;
      margin-bottom: 20vh;
+     animation-name: mainOnload;
+     animation-delay: .2s;
+     animation-duration: 2s;
+     opacity: 0;
+     animation-fill-mode: forwards;
 }
+
+@keyframes mainOnload {
+     from{
+          opacity: 0;
+     }
+     to{
+          opacity: 1;
+     }
+}
+
 #mainDiv{
      color: #fff;
      border: .3rem solid rgba($color: #fff, $alpha: .5);
@@ -24,7 +40,7 @@ main{
      align-items: center;
      justify-content: center;
      border-radius: 2rem;
-     backdrop-filter: blur(10px);
+     text-shadow: .3rem .3rem .6rem #000;
      padding: .8rem;
      animation-duration: .6s;
      animation-name: mainInHover;
@@ -39,6 +55,7 @@ main{
 #pfp{
      border-radius: 100%;
      width: 10rem;
+     box-shadow: .35rem .35rem 2rem #000;
 }
 .btns{
      transform: translateY(100%);
@@ -54,31 +71,73 @@ main{
      animation-duration: .4s;
      box-shadow: .2rem .2rem .5rem #000;
 }
-footer{
-     animation-name: btnsIn;
-     animation-duration: .8s;
-     animation-timing-function:ease-in;
+
+
+.btns:nth-child(1){
+     animation-name: btn1Out;
+     animation-delay: 1.5s;
+     animation-duration: .6s;
+     animation-timing-function:ease-out;
      animation-fill-mode: forwards;
-     animation-timing-function: ease-out;
+     transform: translateY(110%);
 }
+.btns:nth-child(2){
+     animation-name: btn1Out;
+     animation-delay: 1.65s;
+     animation-duration: .6s;
+     animation-timing-function:ease-out;
+     animation-fill-mode: forwards;
+     transform: translateY(110%);
+}
+.btns:nth-child(3){
+     animation-name: btn1Out;
+     animation-delay: 1.8s;
+     animation-duration: .6s;
+     animation-timing-function:ease-out;
+     animation-fill-mode: forwards;
+     transform: translateY(110%);
+}
+
+footer{
+     transform: translateY(10%);
+}
+
+@keyframes btn1Out {
+     from{
+          transform: translateY(110%);
+     }
+     to{
+          transform: translateY(-20%);
+     }
+}
+@keyframes btn2Out {
+     from{
+          transform: translateY(110%);
+     }
+     to{
+          transform: translateY(-20%);
+     }
+}
+@keyframes btn3Out {
+     from{
+          transform: translateY(110%);
+     }
+     to{
+          transform: translateY(-20%);
+     }
+}
+
 .btns:hover{
      border: .17rem solid rgba($color: #fff, $alpha: 1);
-     animation-duration: .4s;
-     animation-name: btnInHover;
-     
+     transition-duration: .4s;
 }
+
+
 @keyframes btnOutHover {
      from{
           border: .17rem solid rgba($color: #fff, $alpha: 1);
      }to{
           border: .17rem solid rgba($color: #fff, $alpha: .5);
-     }
-}
-@keyframes btnInHover {
-     from{
-          border: .17rem solid rgba($color: #fff, $alpha: .5);
-     }to{
-          border: .17rem solid rgba($color: #fff, $alpha: 1);
      }
 }
 @keyframes mainInHover {
@@ -93,13 +152,5 @@ footer{
           border: .3rem solid rgba($color: #fff, $alpha: .5);
      }to{
           border: .3rem solid rgba($color: #fff, $alpha: 1);
-     }
-}
-@keyframes btnsIn {
-     0%{
-          transform: translateY(100%);
-     }
-     100%{
-          transform: translateY(-115%);
      }
 }
