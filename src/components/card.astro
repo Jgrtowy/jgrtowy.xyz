@@ -1,0 +1,32 @@
+---
+export interface card {
+     title: string
+     description: string
+     link: string
+}
+const { title, description, link } = Astro.props
+---
+
+<div
+     class="text-center text-2xl border-2 border-black dark:border-gray-500 rounded-lg min-h-24 flex flex-col justify-center dark:hover:border-gray-200 hover:border-gray-800 transition"
+>
+     <h1>
+          <a
+               href={link}
+               class="underline dark:hover:text-gray-300 hover:text-gray-800 transition"
+               >{title}</a
+          >
+     </h1>
+     <h2 class="text-lg">{description}</h2>
+</div>
+
+<style scoped>
+     a:hover {
+          cursor: pointer;
+     }
+     @media (max-width: 768px) {
+          div {
+               height: 10rem;
+          }
+     }
+</style>

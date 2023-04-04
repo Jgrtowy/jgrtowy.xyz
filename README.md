@@ -1,1 +1,1 @@
-# Portfolio website made in Astro
+# Portfolio website made in Astro and TailwindCSS

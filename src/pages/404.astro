@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="404 Not Found">
+     <div class="flex items-center justify-center h-screen">
+          <h1>404</h1>
+          <h2>What exactly were you looking for? 🧐</h2>
+     </div>
+</Layout>
+
+<style scoped>
+     @media (prefers-color-scheme: dark) {
+          h1,
+          h2 {
+               color: #fff;
+          }
+     }
+     div {
+          flex-direction: column;
+     }
+     body {
+          font-family: "Comic Sans MS", cursive, sans-serif;
+     }
+     h1 {
+          font-size: 6rem;
+     }
+     h2 {
+          font-size: 1.7rem;
+     }
+</style>

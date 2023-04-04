@@ -1,13 +1,63 @@
 ---
+import Header from "../components/header.astro"
 import Layout from "../layouts/Layout.astro"
 ---
 
-<Layout title="Welcome to Astro.">
-     <div
-          class="flex justify-center w-screen items-center bg-gray-900 h-screen"
-     >
-          <h1 class="font-mono text-4xl text-white font-extrabold">
-               🚧 Under construction 🚧
-          </h1>
+<Layout title="Jgrtowy's website">
+     <div class="h-screen">
+          <Header />
+          <div
+               class="text-3xl flex flex-col items-center justify-center w-screen max-h-max gap-12"
+          >
+               <div
+                    class="flex justify-around gap-12 items-center text-5xl"
+                    id="header-pfp"
+               >
+                    <h1>👋 Hi! My name is Dawid 👋</h1>
+                    <img
+                         src="/pfp.png"
+                         class="aspect-square w-48 rounded-full shadow-lg shadow-black"
+                    />
+               </div>
+               <div class="flex flex-col text-center gap-3" id="main">
+                    <h1>
+                         🧑‍💻 Currently living in Poland, 2nd grade student in
+                         middle school at programming course. 🧑‍💻
+                    </h1>
+                    <h1>
+                         🖥️ Web developer, mainly focused on frontend, but also
+                         on backend. 🖥️
+                    </h1>
+                    <h1>
+                         ✏️ Have experience in HTML, CSS, Javascript,
+                         Typescript, Python, Java and C++ ✏️
+                    </h1>
+                    <h1>
+                         🍵 Have a comfy seat and take a look at my website! 🍵
+                    </h1>
+               </div>
+          </div>
      </div>
 </Layout>
+
+<style scoped>
+     @media (max-width: 768px) {
+          .h-screen {
+               height: 100vh;
+          }
+          #header-pfp {
+               flex-direction: column-reverse;
+          }
+          #header-pfp img {
+               width: 40%;
+          }
+          #header-pfp h1 {
+               font-size: 1.9rem;
+               text-align: center;
+          }
+          #main {
+               font-size: 1.2rem;
+               gap: 0.2rem;
+          }
+     }
+</style>

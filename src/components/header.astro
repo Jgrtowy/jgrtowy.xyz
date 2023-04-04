@@ -1,0 +1,46 @@
+<header class="flex justify-between py-5 px-24 text-2xl">
+     <div class="flex w-12 items-center gap-6">
+          <img
+               src="/favicon.png"
+               class="aspect-square transition hover:scale-125 hover:rotate-12"
+          /><h1 class="text-3xl">Jgrtowy</h1>
+     </div>
+     <div class="flex gap-6">
+          <a
+               class="dark:hover:text-gray-300 hover:text-gray-700 transition"
+               href="/">Home</a
+          >
+          <a
+               class="dark:hover:text-gray-300 hover:text-gray-700 transition"
+               href="/about">About</a
+          >
+          <a
+               class="dark:hover:text-gray-300 hover:text-gray-700 transition"
+               href="/projects">Projects</a
+          >
+          <a class="dark:hover:text-gray-300 transition" href="/contact"
+               >Contact</a
+          >
+     </div>
+</header>
+
+<style scoped>
+     @media (max-width: 768px) {
+          header {
+               align-items: center;
+               justify-content: center;
+               flex-direction: column;
+               gap: 1rem;
+               padding: 1rem;
+          }
+          header > div:first-child {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+          }
+          header > div:last-child {
+               flex-direction: row;
+               gap: 1rem;
+          }
+     }
+</style>
