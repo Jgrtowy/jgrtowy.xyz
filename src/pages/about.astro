@@ -1,61 +1,32 @@
 ---
-import Header from "../components/header.astro"
-import Layout from "../layouts/Layout.astro"
+import Header from '../components/header.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="">
-     <Header />
-     <div class="text-3xl flex flex-col text-center gap-2">
-          <h1>So as I mentioned earlier...</h1>
-          <h1>
-               🌍 I'm interested in web development, especially frontend
-               development. It's my main goal. 🌍
-          </h1>
-          <h1></h1>
-          <h1>
-               🚀 I'm currently learning TypeScript, React, Svelte and Astro.
-               For styles I like to use Tailwind. 🚀
-          </h1>
-          <h1>
-               📩 However, I made some projects in backend, like Discord bot or
-               simple API. 📩
-          </h1>
-          <h1>
-               🐍 I sometimes make some stuff in Python, Java, C# and C++. 🐍
-          </h1>
-          <h1>
-               🎮 I like playing casual games like Minecraft, Portal or Don't
-               Starve and rhythm games like osu!. 🎮
-          </h1>
-          <h1>
-               🎵 I also like listening to music. Here's <a
-                    href="https://stats.fm/jgrtowy"
-                    class="underline dark:hover:text-gray-300 hover:text-gray-800"
-                    >my stats.fm profile</a
-               > 🎵
-          </h1>
-          <h1>🔧 My favorite tools 🔧</h1>
-          <div class="flex justify-center">
-               <img
-                    src="https://skillicons.dev/icons?i=linux,git,powershell,bash,visualstudio,vscode,idea,vite,googlecloud,netlify"
-               />
-          </div>
-          <h1>📊 Stats 📊</h1>
-          <div class="flex justify-center items-center gap-1 flex-col">
-               <img
-                    src="https://github-readme-stats.vercel.app/api/top-langs/?username=jgrtowy&theme=tokyonight&layout=compact&count_private=true"
-               />
-               <img
-                    src="https://github-readme-stats.vercel.app/api?username=jgrtowy&theme=tokyonight&show_icons=true&count_private=true"
-               />
-          </div>
-     </div>
+<Layout title=''>
+    <Header />
+    <div class='text-3xl flex flex-col text-center gap-2'>
+        <h1>So as I mentioned earlier...</h1>
+        <h1>🌍 I'm interested in web development, especially frontend development. It's my main goal. 🌍</h1>
+        <h1>🚀 I'm currently learning TypeScript, React, Svelte and Astro. For styles I like to use Tailwind. 🚀</h1>
+        <h1>📩 I also made some projects in backend, like Discord bot or simple API. 📩</h1>
+        <h1>🐍 I sometimes make some stuff in Python, Java, C# and C++. 🐍</h1>
+        <h1>🔧 My favorite tools 🔧</h1>
+        <div class='flex justify-center'>
+            <img src='https://skillicons.dev/icons?i=linux,git,powershell,bash,visualstudio,vscode,idea,vite,vercel,netlify' />
+        </div>
+        <h1>📊 Stats 📊</h1>
+        <div class='flex justify-center items-center gap-1 flex-col'>
+            <img src='https://github-readme-stats.vercel.app/api/top-langs/?username=jgrtowy&theme=tokyonight&layout=compact&count_private=true' />
+            <img src='https://github-readme-stats.vercel.app/api?username=jgrtowy&theme=tokyonight&show_icons=true&count_private=true' />
+        </div>
+    </div>
 </Layout>
 
 <style scoped>
-     @media (max-width: 768px) {
-          .text-3xl {
-               font-size: 1.3rem;
-          }
-     }
+    @media (max-width: 768px) {
+        .text-3xl {
+            font-size: 1.3rem;
+        }
+    }
 </style>

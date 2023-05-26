@@ -1,55 +1,35 @@
 ---
-import Card from "../components/card.astro"
-import Header from "../components/header.astro"
-import Layout from "../layouts/Layout.astro"
+import Card from '../components/card.astro';
+import Header from '../components/header.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Projects">
-     <Header />
-     <div class="flex justify-center flex-col w-screen items-center mb-12">
-          <h1 class="text-4xl">📂 Projects 📂</h1>
-     </div>
-     <div id="grid">
-          <Card
-               title="RCON Client"
-               link="https://github.com/Jgrtowy/rconclient"
-               description="Simple RCON Client made in React"
-          />
-          <Card
-               title="Jgrtowy API"
-               link="https://github.com/Jgrtowy/jgrtowyapi"
-               description="Own API made with ExpressJS and Typescript"
-          />
-          <Card title="YourBot" link="" description="Bot made in Discord.js" />
-          <Card
-               title="NetlifyAPITrigger"
-               link="https://github.com/Jgrtowy/NetlifyAPITrigger"
-               description="Netlify functions that trigger when new deployment is created"
-          />
-          <Card
-               title="JgrtowyWeb"
-               link="https://github.com/Jgrtowy/JgrtowyWeb"
-               description="Site made with Astro and TailwindCSS you're currently on"
-          />
-          <Card
-               title="Minecraft Server Creator"
-               link="https://github.com/Jgrtowy/server-creator"
-               description="Project made as my first steps into Electron, currently abandoned"
-          />
-     </div>
-     <h1 class="text-center text-3xl italic my-12">
-          ... and more to be coming!
-     </h1>
+<Layout title='Projects'>
+    <Header />
+    <div class='flex justify-center flex-col w-screen items-center mb-12'>
+        <h1 class='text-4xl'>📂 Projects 📂</h1>
+    </div>
+    <div id='grid'>
+        <Card title='RCON Client' link='https://github.com/Jgrtowy/rconclient' description='Simple RCON Client made in React' />
+        <Card title='Jgrtowy API' link='https://github.com/Jgrtowy/jgrtowyapi' description='Own API made with ExpressJS and Typescript' />
+        <Card title='YourBot' link='https://github.com/Jgrtowy/YourBot' description='General purpose bot made in Discord.js' />
+        <Card title='NetlifyAPITrigger' link='https://github.com/Jgrtowy/NetlifyAPITrigger' description='Netlify functions that trigger when new deployment is created' />
+        <Card title='JgrtowyWeb' link='https://github.com/Jgrtowy/JgrtowyWeb' description='Portfolio site made with Astro and Tailwind' />
+        <Card title='Team randomizer' link='https://github.com/Jgrtowy/TeamRandomizer' description='Randomize your team in just a second (sometimes two)' />
+    </div>
+    <h1 class='text-center text-3xl italic my-12'>... and more to be coming!</h1>
 </Layout>
 
 <style scoped>
-     #grid {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: repeat(2, 1fr);
-          grid-gap: 1rem;
-          width: 100%;
-          max-width: 800px;
-          margin: 0 auto;
-     }
+    #grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+        gap: 1rem;
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
 </style>
