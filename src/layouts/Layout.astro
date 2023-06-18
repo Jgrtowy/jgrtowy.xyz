@@ -21,8 +21,13 @@ const { title } = Astro.props;
 </html>
 
 <style scoped lang='postcss'>
-    /* @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap'); */
-    @import url('https://fonts.googleapis.com/css2?family=Varela+Round:wght@400&display=swap');
+    @font-face {
+        font-family: 'Varela Round';
+        src: url('/fonts/VarelaRound-Regular.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
 
     body {
         margin: 0;
