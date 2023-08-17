@@ -1,11 +1,9 @@
 ---
-import Header from '../components/header.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='/'>
-    <div class='h-screen'>
-        <Header />
+    <div class=''>
         <div class='text-3xl flex flex-col items-center justify-center w-screen max-h-max gap-12'>
             <div class='flex justify-around gap-12 items-center text-5xl' id='header-pfp'>
                 <h1>👋 Hi! My name is Dawid 👋</h1>
@@ -23,9 +21,6 @@ import Layout from '../layouts/Layout.astro';
 
 <style scoped>
     @media (max-width: 768px) {
-        .h-screen {
-            height: 100vh;
-        }
         #header-pfp {
             flex-direction: column-reverse;
         }
