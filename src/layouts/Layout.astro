@@ -1,4 +1,5 @@
 ---
+export const prerender = true;
 import { ViewTransitions } from 'astro:transitions';
 import Header from '../components/header.astro';
 export interface Props {
@@ -17,77 +18,87 @@ const { title } = Astro.props;
         <meta name='generator' content={Astro.generator} />
         <title>{title}</title>
         <ViewTransitions />
+        <meta name='description' content='👋 Oh, hello there!' />
+        <meta name='keywords' content='jgrtowy, dawid gul, gul, jgrtowy.xyz' />
+        <meta name='author' content='Dawid Gul' />
+        <meta property='og:title' content='jgrtowy.xyz' />
+        <meta property='og:description' content='👋 Oh, hello there!' />
+        <meta property='og:locale' content='en_US' />
+        <meta name='apple-mobile-web-app-capable' content='yes' />
+        <meta name='apple-mobile-web-app-status-bar-style' content='#70582e' />
+        <meta name='theme-color' content='#70582e' />
+        <meta name='robots' content='index,follow' />
+        <link rel='canonical' href='https://jgrtowy.xyz' />
     </head>
     <body>
         <Header transition:persist />
         <slot />
 
-        <style scoped lang='postcss'>
-    @font-face {
-        font-family: 'Varela Round';
-        src: url('/fonts/VarelaRound-Regular.woff2') format('woff2');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-    }
+        <style>
+            @font-face {
+                font-family: 'Varela Round';
+                src: url('/fonts/VarelaRound-Regular.woff2') format('woff2');
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
 
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Varela Round', 'Helvetica', sans-serif;
-        /* background: rgba(0,0,0,0); */
-    }
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Varela Round', 'Helvetica', sans-serif;
+            }
 
-    :root {
-        --bg-primary-dark: #70582e;
-        --bg-secondary-dark: #231003;
-        --bg-primary-light: #e0d9c5;
-        --bg-secondary-light: #eca12b;
-    }
-    @media (prefers-color-scheme: dark) {
-        html {
-            background: var(--bg-primary-dark) 0%;
-            background: radial-gradient(circle, var(--bg-primary-dark) 0%, var(--bg-secondary-dark) 100%);
-            color: #fff;
-            text-shadow: 0.2rem 0.2rem 0.5rem #000;
-        }
-    }
-    @media (prefers-color-scheme: light) {
-        html {
-            background: var(--bg-primary-light) 0%;
-            background: radial-gradient(circle, var(--bg-primary-light) 0%, var(--bg-secondary-light) 100%);
-            color: #000;
-        }
-    }
-    html {
-        background-size: 1000%;
-        width: 100%;
-        height: 100vh;
-        animation: bg 60s linear infinite;
-    }
+            :root {
+                --bg-primary-dark: #70582e;
+                --bg-secondary-dark: #231003;
+                --bg-primary-light: #e0d9c5;
+                --bg-secondary-light: #eca12b;
+            }
+            @media (prefers-color-scheme: dark) {
+                html {
+                    background: var(--bg-primary-dark) 0%;
+                    background: radial-gradient(circle, var(--bg-primary-dark) 0%, var(--bg-secondary-dark) 100%);
+                    color: #fff;
+                    text-shadow: 0.2rem 0.2rem 0.5rem #000;
+                }
+            }
+            @media (prefers-color-scheme: light) {
+                html {
+                    background: var(--bg-primary-light) 0%;
+                    background: radial-gradient(circle, var(--bg-primary-light) 0%, var(--bg-secondary-light) 100%);
+                    color: #000;
+                }
+            }
+            html {
+                background-size: 1000%;
+                width: 100%;
+                height: 100vh;
+                animation: bg 60s linear infinite;
+            }
 
-    @keyframes bg {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-    }
-    @-moz-keyframes bg {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-    }
-</style>
+            @keyframes bg {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+            @-moz-keyframes bg {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+        </style>
     </body>
 </html>
