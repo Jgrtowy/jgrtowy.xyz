@@ -9,28 +9,6 @@
         <a class='dark:hover:text-gray-300 hover:text-gray-700 transition' href='/contact'>Contact</a>
     </div>
 </header>
-<script defer>
-    const init = () => {
-        const elements = document.querySelectorAll('a');
-
-        const checkRoute = (e) => {
-            const target = e.target;
-            const targetHref = target.getAttribute('href');
-
-            if (targetHref && window.location.pathname === targetHref) {
-                e.preventDefault();
-                return true;
-            } else {
-                return false;
-            }
-        };
-
-        elements.forEach((el) => {
-            el.addEventListener('click', (e) => checkRoute(e));
-        });
-    };
-    init();
-</script>
 <style scoped>
     @media (max-width: 768px) {
         header {
