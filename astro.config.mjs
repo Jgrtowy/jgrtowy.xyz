@@ -8,9 +8,6 @@ export default defineConfig({
     integrations: [tailwind()],
     output: 'server',
     adapter: vercel(),
-    experimental: {
-        viewTransitions: true,
-    },
     redirects: {
         '/github': 'https://github.com/Jgrtowy',
         '/twitter': 'https://twitter.com/Jgrtowy',

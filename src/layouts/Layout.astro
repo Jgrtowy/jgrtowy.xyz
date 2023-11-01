@@ -35,6 +35,7 @@ const { title } = Astro.props;
         margin: 0;
         padding: 0;
         font-family: 'Varela Round', 'Helvetica', sans-serif;
+        /* background: rgba(0,0,0,0); */
     }
 
     :root {
@@ -59,13 +60,24 @@ const { title } = Astro.props;
         }
     }
     html {
-        background-size: 700%;
+        background-size: 1000%;
         width: 100%;
         height: 100vh;
         animation: bg 60s linear infinite;
     }
 
     @keyframes bg {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    @-moz-keyframes bg {
         0% {
             background-position: 0% 50%;
         }
