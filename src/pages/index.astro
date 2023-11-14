@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const data = await fetch('https://api.github.com/users/jgrtowy').then((res) => res.json())
 ---
 
 <Layout title='/'>
@@ -7,7 +9,7 @@ import Layout from '../layouts/Layout.astro';
         <div class='text-3xl flex flex-col items-center justify-center w-screen max-h-max gap-12'>
             <div class='flex justify-around gap-12 items-center text-5xl' id='header-pfp'>
                 <h1>👋 Hi! My name is Dawid 👋</h1>
-                <img src='/pfp.png' class='aspect-square w-48 rounded-full shadow-lg backdrop-brightness-75 shadow-black' />
+                <img src={data.avatar_url} class='aspect-square w-48 rounded-full shadow-lg backdrop-brightness-75 shadow-black' />
             </div>
             <div class='flex flex-col text-center gap-3' id='main'>
                 <h1>🧑‍💻 Currently living in Poland, 3rd grade student in middle school at programming course. 🧑‍💻</h1>
