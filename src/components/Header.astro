@@ -1,12 +1,17 @@
+---
+import { DarkModeToggle } from './DarkModeToggle';
+import { Button, buttonVariants } from './ui/button';
+---
+
 <header class='flex justify-between py-5 px-24 text-2xl'>
     <div class='flex w-12 items-center gap-6'>
-        <img src='/favicon.png' class='aspect-square transition hover:scale-125 hover:rotate-12' /><h1 class='text-3xl'>Jgrtowy</h1>
+        <a class={`${buttonVariants({ variant: 'ghost' })} text-xl`} href='/'>Home</a>
+        <a class={`${buttonVariants({ variant: 'ghost' })} text-xl`} href='/about'>About</a>
+        <a class={`${buttonVariants({ variant: 'ghost' })} text-xl`} href='/projects'>Projects</a>
+        <a class={`${buttonVariants({ variant: 'ghost' })} text-xl`} href='/contact'>Contact</a>
     </div>
     <div class='flex gap-6'>
-        <a class='dark:hover:text-gray-300 hover:text-gray-700 transition' href='/'>Home</a>
-        <a class='dark:hover:text-gray-300 hover:text-gray-700 transition' href='/about'>About</a>
-        <a class='dark:hover:text-gray-300 hover:text-gray-700 transition' href='/projects'>Projects</a>
-        <a class='dark:hover:text-gray-300 hover:text-gray-700 transition' href='/contact'>Contact</a>
+        <DarkModeToggle client:load />
     </div>
 </header>
 <style scoped>

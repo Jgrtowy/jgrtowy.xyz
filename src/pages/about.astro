@@ -1,22 +1,27 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='/about'>
     <div class='text-3xl flex flex-col text-center gap-2'>
-        <h1>So as I mentioned earlier...</h1>
         <h1>🌍 I'm interested in web development, especially frontend. 🌍</h1>
-        <h1>🚀 I'm currently learning TypeScript, React, Svelte and Astro. For styles I like to use Tailwind. 🚀</h1>
+        <h1>🚀 I mainly use React, Svelte and Astro. All of these with TypeScript. 🚀</h1>
+        <h1>👻 For styles I use Tailwind and for components - shadcn/ui & NextUI. 👻</h1>
         <h1>📩 I also made some projects in backend, like Discord bot or simple API. 📩</h1>
-        <h1>👻 I sometimes make stuff in Go, Java, C# and C++. 👻</h1>
         <h1>🔧 My favorite tools 🔧</h1>
         <div class='flex justify-center'>
-            <img src='https://skillicons.dev/icons?i=linux,git,bash,visualstudio,vscode,idea,vite,vercel,netlify,ps' />
+            <Image loading={'eager'} inferSize alt='Icons of tools I use' src='https://skillicons.dev/icons?i=linux,git,bash,visualstudio,vscode,idea,vite,vercel,netlify,ps' />
         </div>
         <h1>📊 Stats 📊</h1>
         <div class='flex justify-center items-center gap-1 flex-col'>
-            <img src='https://github-readme-stats.vercel.app/api/top-langs/?username=jgrtowy&theme=tokyonight&layout=compact&count_private=true' />
-            <img src='https://github-readme-stats.vercel.app/api?username=jgrtowy&theme=tokyonight&show_icons=true&count_private=true' />
+            <Image
+                loading={'eager'}
+                inferSize
+                alt='Most used languages'
+                src='https://github-readme-stats.vercel.app/api/top-langs/?username=jgrtowy&layout=compact&count_private=true&theme=transparent&text_color=ffffff&icon_color=f97316&title_color=f97316&hide_border=true'
+            />
+            <Image loading={'eager'} inferSize alt='GitHub stats' src='https://github-readme-stats.vercel.app/api?username=jgrtowy&show_icons=true&count_private=true&theme=transparent&text_color=ffffff&icon_color=f97316&title_color=f97316&hide_border=true' />
         </div>
     </div>
 </Layout>

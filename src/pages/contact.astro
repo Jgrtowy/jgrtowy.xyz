@@ -1,27 +1,31 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='/contact'>
     <div class='flex justify-center items-center flex-col gap-5 w-screen'>
         <h1 class='text-4xl' id='header-text'>📝 Interested? Contact me here 📝</h1>
-        <div class='flex justify-center flex-col gap-5'>
-            <div class='flex items-center justify-between gap-12 text-2xl'>
-                <img src='https://skillicons.dev/icons?i=discord' />
+        <div class='flex justify-center flex-col gap-5 w-56'>
+            <div class='flex items-center justify-between text-2xl'>
+                <Image inferSize alt='Discord icon' loading={'eager'} src='https://skillicons.dev/icons?i=discord' />
                 <h1>jgrtowy</h1>
             </div>
             <div class='flex items-center justify-between text-2xl'>
-                <img src='https://skillicons.dev/icons?i=twitter' />
-                <h1>@Jgrtowy</h1>
+                <Image inferSize alt='Twitter icon' loading={'eager'} src='https://skillicons.dev/icons?i=twitter' />
+                <h1>@jgrtowy</h1>
             </div>
             <div class='flex items-center justify-between text-2xl'>
-                <img src='https://skillicons.dev/icons?i=github' />
-                <h1>/Jgrtowy</h1>
+                <Image inferSize alt='GitHub icon' loading={'eager'} src='https://skillicons.dev/icons?i=github' />
+                <h1>/jgrtowy</h1>
+            </div>
+            <div class='flex items-center justify-between text-2xl'>
+                <Image inferSize alt='LinkedIn icon' loading={'eager'} src='https://skillicons.dev/icons?i=linkedin' />
+                <h1>/in/dawidgul</h1>
             </div>
         </div>
-        <h1 class='text-3xl'>✉️ Send me an e-mail ✉️</h1>
         <h2 class='text-3xl'>
-            <a href='mailto:contact@jgrtowy.xyz' class='underline dark:hover:text-gray-300 transition hover:text-gray-800'>contact@jgrtowy.xyz</a>
+            <a href='mailto:contact@jgrtowy.xyz' class='underline dark:hover:text-gray-300 transition hover:text-gray-800'>contact@jgrtowy.me</a>
         </h2>
     </div>
 </Layout>

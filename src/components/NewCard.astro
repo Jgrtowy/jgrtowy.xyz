@@ -1,0 +1,40 @@
+---
+import { Card, CardDescription, CardHeader, CardTitle, CardFooter } from './ui/card';
+import { buttonVariants } from './ui/button';
+import { Icon } from 'astro-icon/components';
+
+export interface Props {
+    title: string;
+    description: string;
+    links: Link[];
+}
+
+interface Link {
+    url: string;
+    icon: string;
+}
+
+const { title, description, links } = Astro.props;
+---
+
+<Card>
+    <CardHeader>
+        <CardTitle>{title}</CardTitle>
+        <CardDescription>{description}</CardDescription>
+    </CardHeader>
+    <CardFooter className='flex justify-end gap-2'>
+        <!-- <a class={`${buttonVariants({ variant: 'secondary', size: 'icon' })} p-1`} href='https://github.com/jgrtowy/rconclient'>
+            <Icon name='fa-brands:github' class='w-96 h-96' />
+        </a>
+        <a class={`${buttonVariants({ variant: 'secondary', size: 'icon' })} p-1`} href='https://github.com/jgrtowy/rconclient'>
+            <Icon name='fa-solid:globe' class='w-96 h-96' />
+        </a> -->
+        {
+            links.map(({ url, icon }) => (
+                <a class={`${buttonVariants({ variant: 'default', size: 'icon' })} p-1`} href={url}>
+                    <Icon name={icon} class='w-12 h-12' />
+                </a>
+            ))
+        }
+    </CardFooter>
+</Card>

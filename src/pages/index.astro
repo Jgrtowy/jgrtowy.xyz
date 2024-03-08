@@ -1,7 +1,10 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 
-const data = await fetch('https://api.github.com/users/jgrtowy').then((res) => res.json())
+const data = await fetch('https://api.github.com/users/jgrtowy')
+    .then((res) => res.json())
+    .then((data) => data.avatar_url);
 ---
 
 <Layout title='/'>
@@ -9,12 +12,19 @@ const data = await fetch('https://api.github.com/users/jgrtowy').then((res) => r
         <div class='text-3xl flex flex-col items-center justify-center w-screen max-h-max gap-12'>
             <div class='flex justify-around gap-12 items-center text-5xl' id='header-pfp'>
                 <h1>👋 Hi! My name is Dawid 👋</h1>
-                <img src={data.avatar_url} class='aspect-square w-48 rounded-full shadow-lg backdrop-brightness-75 shadow-black' />
+                <Image
+                    src={data || 'https://gravatar.com/avatar/0ca0a192a783c2734db053f6539ccfade213ed93fd708a155fa67ceaa5092ec4?s=192'}
+                    width={192}
+                    height={192}
+                    loading={'eager'}
+                    class='aspect-square rounded-full shadow-lg backdrop-brightness-75 shadow-black'
+                    alt='PFP'
+                />
             </div>
             <div class='flex flex-col text-center gap-3' id='main'>
                 <h1>🧑‍💻 Currently living in Poland, 3rd grade student in middle school at programming course. 🧑‍💻</h1>
                 <h1>🖥️ Web developer, mainly focused on frontend, but also on backend. 🖥️</h1>
-                <h1>✏️ Have experience in HTML, CSS, Javascript, Typescript, Go, Java, C# and C++ ✏️</h1>
+                <h1>✏️ Have experience in TypeScript, React, Svelte, Go, Java, C# and C++ ✏️</h1>
                 <h1>🍵 Have a comfy seat and take a look at my website! 🍵</h1>
             </div>
         </div>
