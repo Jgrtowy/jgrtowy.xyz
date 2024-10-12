@@ -1,32 +1,58 @@
 ---
-import { Image } from 'astro:assets';
-import Layout from '../layouts/Layout.astro';
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title='/contact'>
-    <div class='flex justify-center items-center flex-col gap-5 w-screen'>
-        <h1 class='text-4xl' id='header-text'>📝 Interested? Contact me here 📝</h1>
-        <div class='flex justify-center flex-col gap-5 w-56'>
-            <div class='flex items-center justify-between text-2xl'>
-                <Image inferSize alt='Discord icon' loading={'eager'} src='https://skillicons.dev/icons?i=discord' />
+<Layout title="/contact">
+    <div class="flex justify-center items-center flex-col w-screen">
+        <div class="flex justify-center flex-col w-screen items-center mb-4">
+            <h1 class="text-4xl">📝 Interested? Contact me here 📝</h1>
+        </div>
+        <div class="flex justify-center flex-col gap-5 w-56">
+            <div class="flex items-center justify-between text-2xl">
+                <Image
+                    inferSize
+                    alt="Discord icon"
+                    loading={"eager"}
+                    src="https://skillicons.dev/icons?i=discord"
+                />
                 <h1>jgrtowy</h1>
             </div>
-            <div class='flex items-center justify-between text-2xl'>
-                <Image inferSize alt='Twitter icon' loading={'eager'} src='https://skillicons.dev/icons?i=twitter' />
+            <div class="flex items-center justify-between text-2xl">
+                <Image
+                    inferSize
+                    alt="Twitter icon"
+                    loading={"eager"}
+                    src="https://skillicons.dev/icons?i=twitter"
+                />
                 <h1>@jgrtowy</h1>
             </div>
-            <div class='flex items-center justify-between text-2xl'>
-                <Image inferSize alt='GitHub icon' loading={'eager'} src='https://skillicons.dev/icons?i=github' />
+            <div class="flex items-center justify-between text-2xl">
+                <Image
+                    inferSize
+                    alt="GitHub icon"
+                    loading={"eager"}
+                    src="https://skillicons.dev/icons?i=github"
+                />
                 <h1>/jgrtowy</h1>
             </div>
-            <div class='flex items-center justify-between text-2xl'>
-                <Image inferSize alt='LinkedIn icon' loading={'eager'} src='https://skillicons.dev/icons?i=linkedin' />
+            <div class="flex items-center justify-between text-2xl">
+                <Image
+                    inferSize
+                    alt="LinkedIn icon"
+                    loading={"eager"}
+                    src="https://skillicons.dev/icons?i=linkedin"
+                />
                 <h1>/in/dawidgul</h1>
             </div>
+            <h2 class="text-3xl">
+                <a
+                    href="mailto:contact@jgrtowy.xyz"
+                    class="underline dark:hover:text-gray-300 transition hover:text-gray-800"
+                    >contact@jgrtowy.me</a
+                >
+            </h2>
         </div>
-        <h2 class='text-3xl'>
-            <a href='mailto:contact@jgrtowy.xyz' class='underline dark:hover:text-gray-300 transition hover:text-gray-800'>contact@jgrtowy.me</a>
-        </h2>
     </div>
 </Layout>
 
