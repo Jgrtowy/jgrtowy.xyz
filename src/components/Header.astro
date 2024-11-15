@@ -1,36 +1,36 @@
 ---
-import { DarkModeToggle } from './DarkModeToggle';
-import { Button, buttonVariants } from './ui/button';
+import { DarkModeToggle } from "./DarkModeToggle";
+import { Button, buttonVariants } from "./ui/button";
 ---
 
-<header class='flex justify-between py-5 px-24 text-2xl'>
-    <div class='flex w-12 items-center gap-6'>
-        <a class={`${buttonVariants({ variant: 'ghost' })} text-xl`} href='/'>Home</a>
-        <a class={`${buttonVariants({ variant: 'ghost' })} text-xl`} href='/about'>About</a>
-        <a class={`${buttonVariants({ variant: 'ghost' })} text-xl`} href='/projects'>Projects</a>
-        <a class={`${buttonVariants({ variant: 'ghost' })} text-xl`} href='/contact'>Contact</a>
+<header
+    class="flex sm:justify-between sm:flex-row flex-col py-5 sm:px-2 md:px-24 px-1 text-2xl sm:gap-0 gap-1 w-screen"
+>
+    <div
+        class="flex sm:w-12 w-screen sm:justify-normal justify-between sm:gap-6"
+    >
+        <a
+            class={`${buttonVariants({ variant: "ghost" })} text-xl`}
+            href="/"
+            data-astro-prefetch>Home</a
+        >
+        <a
+            class={`${buttonVariants({ variant: "ghost" })} text-xl`}
+            href="/about"
+            data-astro-prefetch>About</a
+        >
+        <a
+            class={`${buttonVariants({ variant: "ghost" })} text-xl`}
+            href="/projects"
+            data-astro-prefetch>Projects</a
+        >
+        <a
+            class={`${buttonVariants({ variant: "ghost" })} text-xl`}
+            href="/contact"
+            data-astro-prefetch>Contact</a
+        >
     </div>
-    <div class='flex gap-6'>
+    <div class="flex gap-6 justify-center">
         <DarkModeToggle client:load />
     </div>
 </header>
-<style scoped>
-    @media (max-width: 768px) {
-        header {
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            gap: 1rem;
-            padding: 1rem;
-        }
-        header > div:first-child {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        header > div:last-child {
-            flex-direction: row;
-            gap: 1rem;
-        }
-    }
-</style>

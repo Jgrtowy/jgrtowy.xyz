@@ -8,59 +8,41 @@ const data = await fetch("https://api.github.com/users/jgrtowy")
 ---
 
 <Layout title="/">
-    <div class="">
+    <div
+        class="flex flex-col items-center justify-center w-screen max-h-max gap-12"
+    >
         <div
-            class="text-3xl flex flex-col items-center justify-center w-screen max-h-max gap-12"
+            class="flex justify-around gap-12 items-center sm:flex-row flex-col-reverse"
+            id="header-pfp"
         >
-            <div
-                class="flex justify-around gap-12 items-center text-5xl"
-                id="header-pfp"
-            >
-                <h1>👋 Hi! My name is Dawid 👋</h1>
-                <Image
-                    src={data ||
-                        "https://gravatar.com/avatar/0ca0a192a783c2734db053f6539ccfade213ed93fd708a155fa67ceaa5092ec4?s=192"}
-                    width={192}
-                    height={192}
-                    loading={"eager"}
-                    class="aspect-square rounded-full shadow-lg backdrop-brightness-75 shadow-black"
-                    alt="PFP"
-                />
-            </div>
-            <div class="flex flex-col text-center gap-3" id="main">
-                <h1>
-                    🧑‍💻 Currently living in Poland, 4th grade student in middle
-                    school at programming course. 🧑‍💻
-                </h1>
-                <h1>
-                    🖥️ Web developer, mainly focused on frontend, but also on
-                    backend. 🖥️
-                </h1>
-                <h1>
-                    ✏️ Have experience in TypeScript, React, Svelte, Go, Java,
-                    C# and C++ ✏️
-                </h1>
-                <h1>🍵 Have a comfy seat and take a look at my website! 🍵</h1>
-            </div>
+            <h1 class="sm:text-5xl text-2xl">👋 Hi! My name is Dawid 👋</h1>
+            <Image
+                src={data ||
+                    "https://gravatar.com/avatar/0ca0a192a783c2734db053f6539ccfade213ed93fd708a155fa67ceaa5092ec4?s=192"}
+                width={192}
+                height={192}
+                loading={"eager"}
+                class="aspect-square rounded-full shadow-lg backdrop-brightness-75 shadow-black sm:w-max w-36"
+                alt="PFP"
+            />
+        </div>
+        <div
+            class="flex flex-col text-center gap-3 sm:text-3xl text-xl"
+            id="main"
+        >
+            <h1>
+                🧑‍💻 Currently living in Poland, 4th grade student in middle
+                school at programming course. 🧑‍💻
+            </h1>
+            <h1>
+                🖥️ Web developer, mainly focused on frontend, but also on
+                backend. 🖥️
+            </h1>
+            <h1>
+                ✏️ Have experience in TypeScript, React, Svelte, Go, Java, C#
+                and C++ ✏️
+            </h1>
+            <h1>🍵 Have a comfy seat and take a look at my website! 🍵</h1>
         </div>
     </div>
 </Layout>
-
-<style scoped>
-    @media (max-width: 768px) {
-        #header-pfp {
-            flex-direction: column-reverse;
-        }
-        #header-pfp img {
-            width: 40%;
-        }
-        #header-pfp h1 {
-            font-size: 1.9rem;
-            text-align: center;
-        }
-        #main {
-            font-size: 1.2rem;
-            gap: 0.2rem;
-        }
-    }
-</style>

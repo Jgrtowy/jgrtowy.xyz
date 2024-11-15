@@ -4,102 +4,104 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="/projects">
-    <div class="flex justify-center flex-col w-screen items-center mb-4">
-        <h1 class="text-4xl">📂 Projects 📂</h1>
+    <div class="flex flex-col items-center">
+        <div class="flex justify-center flex-col w-screen items-center mb-4">
+            <h1 class="text-4xl">📂 Projects 📂</h1>
+        </div>
+        <div id="grid">
+            <NewCard
+                title="jgrtowy.me"
+                description="Portfolio site made with Astro and Tailwind"
+                links={[
+                    {
+                        url: "https://github.com/Jgrtowy/jgrtowy.me",
+                        icon: "fa-brands:github",
+                    },
+                    { url: "https://jgrtowy.me", icon: "fa-solid:globe" },
+                ]}
+            />
+            <NewCard
+                title="API"
+                description="Own API made with ExpressJS and Typescript"
+                links={[
+                    {
+                        url: "https://github.com/jgrtowy/api",
+                        icon: "fa-brands:github",
+                    },
+                    { url: "https://api.jgrtowy.me/", icon: "fa-solid:globe" },
+                ]}
+            />
+            <NewCard
+                title="RCON Client"
+                description="Simple RCON Client made in React"
+                links={[
+                    {
+                        url: "https://github.com/jgrtowy/rconclient",
+                        icon: "fa-brands:github",
+                    },
+                    { url: "https://rcon.jgrtowy.me", icon: "fa-solid:globe" },
+                ]}
+            />
+            <NewCard
+                title="YourBot"
+                description="General purpose bot made in Discord.js"
+                links={[
+                    {
+                        url: "https://github.com/jgrtowy/YourBot",
+                        icon: "fa-brands:github",
+                    },
+                ]}
+            />
+            <NewCard
+                title="BSSTools"
+                description="Tools for a Roblox game, yes"
+                links={[
+                    {
+                        url: "https://github.com/jgrtowy/BSSTools",
+                        icon: "fa-brands:github",
+                    },
+                    { url: "https://bss.jgrtowy.me", icon: "fa-solid:globe" },
+                ]}
+            />
+            <NewCard
+                title="ZSTiO Bookfair"
+                description="Web app made with my friend to organise our school's annual used book fair, built with Svelte & Firebase"
+                links={[
+                    {
+                        url: "https://github.com/theSaintKappa/zstio-bookfair",
+                        icon: "fa-brands:github",
+                    },
+                    {
+                        url: "https://kiermasz.mechaniktg.pl",
+                        icon: "fa-solid:globe",
+                    },
+                ]}
+            />
+            <NewCard
+                title="YourBot"
+                description="Discord bot to use most of Hypixel's API information"
+                links={[
+                    {
+                        url: "https://github.com/jgrtowy/hybot",
+                        icon: "fa-brands:github",
+                    },
+                ]}
+            />
+            <NewCard
+                title="yamst"
+                description="Path tool used to quickly install minecraft server and setup it"
+                links={[
+                    {
+                        url: "https://github.com/jgrtowy/yamst",
+                        icon: "fa-brands:github",
+                    },
+                ]}
+            />
+        </div>
+        <h1 class="text-center text-3xl italic my-12">
+            ... and more to be coming!
+        </h1>
     </div>
-    <div id="grid">
-        <NewCard
-            title="jgrtowy.me"
-            description="Portfolio site made with Astro and Tailwind"
-            links={[
-                {
-                    url: "https://github.com/Jgrtowy/jgrtowy.me",
-                    icon: "fa-brands:github",
-                },
-                { url: "https://jgrtowy.me", icon: "fa-solid:globe" },
-            ]}
-        />
-        <NewCard
-            title="API"
-            description="Own API made with ExpressJS and Typescript"
-            links={[
-                {
-                    url: "https://github.com/jgrtowy/api",
-                    icon: "fa-brands:github",
-                },
-                { url: "https://api.jgrtowy.me/", icon: "fa-solid:globe" },
-            ]}
-        />
-        <NewCard
-            title="RCON Client"
-            description="Simple RCON Client made in React"
-            links={[
-                {
-                    url: "https://github.com/jgrtowy/rconclient",
-                    icon: "fa-brands:github",
-                },
-                { url: "https://rcon.jgrtowy.me", icon: "fa-solid:globe" },
-            ]}
-        />
-        <NewCard
-            title="YourBot"
-            description="General purpose bot made in Discord.js"
-            links={[
-                {
-                    url: "https://github.com/jgrtowy/YourBot",
-                    icon: "fa-brands:github",
-                },
-            ]}
-        />
-        <NewCard
-            title="BSSTools"
-            description="Tools for a Roblox game, yes"
-            links={[
-                {
-                    url: "https://github.com/jgrtowy/BSSTools",
-                    icon: "fa-brands:github",
-                },
-                { url: "https://bss.jgrtowy.me", icon: "fa-solid:globe" },
-            ]}
-        />
-        <NewCard
-            title="ZSTiO Bookfair"
-            description="Web app made with my friend to organise our school's annual used book fair, built with Svelte & Firebase"
-            links={[
-                {
-                    url: "https://github.com/theSaintKappa/zstio-bookfair",
-                    icon: "fa-brands:github",
-                },
-                {
-                    url: "https://kiermasz.mechaniktg.pl",
-                    icon: "fa-solid:globe",
-                },
-            ]}
-        />
-        <NewCard
-            title="YourBot"
-            description="Discord bot to use most of Hypixel's API information"
-            links={[
-                {
-                    url: "https://github.com/jgrtowy/hybot",
-                    icon: "fa-brands:github",
-                },
-            ]}
-        />
-        <NewCard
-            title="yamst"
-            description="Path tool used to quickly install minecraft server and setup it"
-            links={[
-                {
-                    url: "https://github.com/jgrtowy/yamst",
-                    icon: "fa-brands:github",
-                },
-            ]}
-        />
-    </div>
-    <h1 class="text-center text-3xl italic my-12">
-        ... and more to be coming!
-    </h1>
 </Layout>
 
 <style scoped>

@@ -4,9 +4,9 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="/about">
-    <div class="text-3xl flex flex-col text-center gap-2">
+    <div class="flex flex-col text-center gap-2 sm:text-3xl text-xl">
         <div class="flex justify-center flex-col w-screen items-center mb-4">
-            <h1 class="text-4xl">📃 About Me 📃</h1>
+            <h1 class="sm:text-5xl text-3xl">📃 About Me 📃</h1>
         </div>
         <h1>🌍 I'm interested in web development, especially frontend. 🌍</h1>
         <h1>
@@ -47,11 +47,3 @@ import Layout from "../layouts/Layout.astro";
         </div>
     </div>
 </Layout>
-
-<style scoped>
-    @media (max-width: 768px) {
-        .text-3xl {
-            font-size: 1.3rem;
-        }
-    }
-</style>
