@@ -4,7 +4,7 @@ import { Button, buttonVariants } from "./ui/button";
 ---
 
 <header
-    class="flex sm:justify-between sm:flex-row flex-col py-5 sm:px-2 md:px-24 px-1 text-2xl sm:gap-0 gap-1 w-screen"
+    class="flex sm:justify-between sm:flex-row flex-col py-5 sm:px-2 md:px-24 px-1 text-2xl sm:gap-0 gap-1 w-screen overflow-x-hidden"
 >
     <div
         class="flex sm:w-12 w-screen sm:justify-normal justify-between sm:gap-6"
@@ -12,22 +12,22 @@ import { Button, buttonVariants } from "./ui/button";
         <a
             class={`${buttonVariants({ variant: "ghost" })} text-xl`}
             href="/"
-            data-astro-prefetch>Home</a
+            data-astro-prefetch="load">Home</a
         >
         <a
             class={`${buttonVariants({ variant: "ghost" })} text-xl`}
             href="/about"
-            data-astro-prefetch>About</a
+            data-astro-prefetch="load">About</a
         >
         <a
             class={`${buttonVariants({ variant: "ghost" })} text-xl`}
             href="/projects"
-            data-astro-prefetch>Projects</a
+            data-astro-prefetch="load">Projects</a
         >
         <a
             class={`${buttonVariants({ variant: "ghost" })} text-xl`}
             href="/contact"
-            data-astro-prefetch>Contact</a
+            data-astro-prefetch="load">Contact</a
         >
     </div>
     <div class="flex gap-6 justify-center">

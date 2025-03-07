@@ -29,12 +29,6 @@ const { title, description, links } = Astro.props;
         <CardDescription>{description}</CardDescription>
     </CardHeader>
     <CardFooter className="flex justify-end gap-2">
-        <!-- <a class={`${buttonVariants({ variant: 'secondary', size: 'icon' })} p-1`} href='https://github.com/jgrtowy/rconclient'>
-            <Icon name='fa-brands:github' class='w-96 h-96' />
-        </a>
-        <a class={`${buttonVariants({ variant: 'secondary', size: 'icon' })} p-1`} href='https://github.com/jgrtowy/rconclient'>
-            <Icon name='fa-solid:globe' class='w-96 h-96' />
-        </a> -->
         {
             links.map(({ url, icon }) => (
                 <a
