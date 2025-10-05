@@ -1,11 +1,26 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.6.0/schema.json",
-	"files": {
-		"ignore": ["node_modules", ".astro"]
-	},
-	"formatter": {
-		"indentStyle": "space",
-		"indentWidth": 4,
-		"lineWidth": 320
-	}
+    "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+    "formatter": {
+        "indentStyle": "space",
+        "indentWidth": 4,
+        "lineWidth": 320
+    },
+    "linter": {
+        "rules": {
+            "correctness": {
+                "noUnusedImports": "off",
+                "useExhaustiveDependencies": "off"
+            },
+            "style": {
+                "useImportType": "warn"
+            },
+            "a11y": {
+                "useKeyWithClickEvents": "off",
+                "noSvgWithoutTitle": "off"
+            },
+            "suspicious": {
+                "noArrayIndexKey": "off"
+            }
+        }
+    }
 }

@@ -1,31 +1,19 @@
 ---
+import { ArrowLeft, ArrowLeftCircle, IterationCw } from "lucide-react";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="/404">
-    <div class="flex items-center justify-center">
-        <h1>404</h1>
-        <h2>What exactly were you looking for? 🧐</h2>
+    <div
+        class="flex items-center justify-center w-screen min-h-dvh flex-col text-white gap-4 bg-black"
+    >
+        <h1 class="text-6xl">404</h1>
+        <h2 class="text-2xl">wrong turn</h2>
+
+        <a
+            href="/"
+            class="hover:underline text-6xl text-blue-500 flex items-center"
+            ><ArrowLeft className="mr-4 w-12 h-12" />go back</a
+        >
     </div>
 </Layout>
-
-<style scoped>
-    @media (prefers-color-scheme: dark) {
-        h1,
-        h2 {
-            color: #fff;
-        }
-    }
-    div {
-        flex-direction: column;
-    }
-    div {
-        font-family: "Comic Sans MS", cursive, sans-serif;
-    }
-    h1 {
-        font-size: 6rem;
-    }
-    h2 {
-        font-size: 1.7rem;
-    }
-</style>

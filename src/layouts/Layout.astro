@@ -1,7 +1,6 @@
 ---
 import "../globals.css";
 import { ClientRouter } from "astro:transitions";
-import Header from "../components/Header.astro";
 export interface Props {
     title: string;
 }
@@ -9,44 +8,82 @@ export interface Props {
 const { title } = Astro.props;
 ---
 
-<script is:inline>
-    document.documentElement.classList.add("dark");
-</script>
-
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="/android-chrome-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="512x512"
+            href="/android-chrome-512x512.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
-        <meta name="description" content="👋 Oh, hello there!" />
+        <meta name="description" content="jgrtowy's personal website!" />
         <meta
             name="keywords"
             content="jgrtowy, dawid gul, gul, jgrtowy.me, jgrtowy.xyz, programmer, software, developer"
         />
         <meta name="author" content="Dawid Gul" />
         <meta property="og:title" content="jgrtowy.xyz" />
-        <meta property="og:description" content="👋 Oh, hello there!" />
+        <meta property="og:description" content="jgrtowy's personal website!" />
         <meta property="og:locale" content="en_US" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="#0c0a09" />
-        <meta name="theme-color" content="#0c0a09" />
         <meta name="robots" content="index,follow" />
         <link rel="canonical" href="https://jgrtowy.xyz" />
         <ClientRouter />
     </head>
     <body>
-        <Header transition:persist />
-        <div class="px-1 flex justify-center">
+        <div class="min-w-screen min-h-dvh overflow-hidden">
             <slot />
         </div>
 
         <style>
+            @import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
+
             @font-face {
-                font-family: "Nunito";
-                src: url("/fonts/Nunito-Regular.woff2") format("woff2");
+                font-family: "Fira Code";
+                src: url("/fonts/FiraCode-Regular.woff2") format("woff2");
                 font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: "Fira Code";
+                src: url("/fonts/FiraCode-Bold.woff2") format("woff2");
+                font-weight: bold;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: "Fira Code";
+                src: url("/fonts/FiraCode-Medium.woff2") format("woff2");
+                font-weight: 500;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: "Fira Code";
+                src: url("/fonts/FiraCode-SemiBold.woff2") format("woff2");
+                font-weight: 600;
                 font-style: normal;
                 font-display: swap;
             }
@@ -54,11 +91,7 @@ const { title } = Astro.props;
             body {
                 margin: 0;
                 padding: 0;
-                font-family: "Nunito", "Helvetica", sans-serif;
-                width: 100%;
-                height: 100dvh;
-                overflow-x: hidden;
-                overflow-y: auto;
+                font-family: "Fira Code", monospace;
             }
         </style>
     </body>

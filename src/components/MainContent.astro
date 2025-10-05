@@ -1,0 +1,37 @@
+---
+import ProfilePicture from "./ProfilePicture.tsx";
+import SocialLinks from "./SocialLinks.tsx";
+---
+
+<main
+    class="flex flex-col items-center justify-center w-screen min-h-dvh gap-12 text-white"
+>
+    <div
+        class="px-8 py-6 border border-white/10 rounded-2xl bg-transparent backdrop-blur-sm flex flex-col gap-4 justify-centter items-center"
+    >
+        <div class="flex flex-row">
+            <ProfilePicture client:load />
+            <div class="flex flex-col justify-center items-center ml-4">
+                <h1 class="text-4xl font-bold hiragana">おはよう!</h1>
+                <h1 class="text-2xl font-semibold">I mean, Good morning!</h1>
+            </div>
+        </div>
+        <div class="flex flex-col text-center text-lg font-light opacity-70">
+            <span>name's Dawid, 19 yo full-stack developer from Poland</span>
+            <span>love coding, anime and being a lazy ass</span>
+            <span>that's it, I guess...</span>
+            <span>my stuff: </span>
+        </div>
+        <div class="mt-2">
+            <SocialLinks client:load />
+        </div>
+    </div>
+</main>
+
+<style scoped>
+    @reference "../globals.css";
+
+    .hiragana {
+        font-family: "Mochiy Pop One", sans-serif;
+    }
+</style>
