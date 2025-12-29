@@ -1,5 +1,5 @@
+import node from "@astrojs/node";
 import react from "@astrojs/react";
-import vercel from "@astrojs/vercel";
 import tailwindcss from "@tailwindcss/vite";
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
@@ -11,7 +11,9 @@ export default defineConfig({
         plugins: [tailwindcss()],
     },
     output: "server",
-    adapter: vercel(),
+    adapter: node({
+        mode: "standalone",
+    }),
     prefetch: true,
     redirects: {
         "/github": "https://github.com/jgrtowy",
